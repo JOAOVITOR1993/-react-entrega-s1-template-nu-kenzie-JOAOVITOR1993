@@ -30,7 +30,7 @@ export const Form = ({listTransactions, setListTransactions, listRender, setList
           type="number" 
           placeholder="1"
           value={valueInput}
-          onChange={(event) => setValueInput(event.target.value)}
+          onChange={(event) => event.target.value >= 0 ? setValueInput(event.target.value) : event.target.value= 0}
           required                 
           />
           <p>R$</p>
