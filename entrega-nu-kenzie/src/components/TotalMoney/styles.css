@@ -1,0 +1,37 @@
+
+.divTotal{
+    width: 100%;
+    height: 6rem;
+    padding: 1.25rem 1.65rem;
+    border: solid 1px var(--color-grey-2);
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+}
+
+.divTotal div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.37rem;
+}
+
+.divTotal div h3{
+   font-size: var(--font-size-4);
+}
+
+.divTotal div p{
+    font-size: var(--font-size-6);
+ }
+
+ .divTotal > p{
+    font-size: var(--font-size-4);
+    font-weight: 700;
+    color: var(--color-primary-1);
+ }
+
+
+ @media (max-width: 330px){
+    .divTotal{
+       flex-direction: column;
+    }
+ }
