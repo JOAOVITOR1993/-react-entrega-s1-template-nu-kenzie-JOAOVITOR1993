@@ -33,6 +33,11 @@
     border-left: solid 4px var(--color-grey-2);
 }
 
+.ulTransactions{
+    height: 24.8rem;
+    overflow: auto;
+}
+
 .ulTransactions li div:nth-child(1){
     display: flex;
     flex-direction: column;
@@ -88,22 +93,7 @@
     height: 20.68rem;
 }
 
-
-@media (max-width: 988px){
-    .container{
-        width: 100%;
-        margin: 0 1rem 0 1rem;
-        padding: 1rem;
-      }
-  }
-
-
 @media (max-width: 768px){
-    .container{
-        width: 100%;
-        margin: 0 1rem 0 1rem;
-        padding: 1rem;
-      }
 
     .divButtons{
         display: flex;
