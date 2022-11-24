@@ -7,6 +7,7 @@ import { List } from "./components/List";
 import { TotalMoney } from "./components/TotalMoney";
 import { Form } from "./components/Form";
 import { Header } from "./components/Header";
+import { Buttons } from "./components/Buttons";
 
 const App = () => {
   const [listTransactions, setListTransactions] = useState([]);
@@ -34,12 +35,7 @@ const App = () => {
               </figure>
               <h1>Centralize o controle das suas finanças</h1>
               <p>de forma rápida e segura</p>
-              <button
-                onClick={login}
-                className="buttonDefaultBig buttonPrimary"
-              >
-                Iniciar
-              </button>
+              <Buttons name={"Iniciar"} className={"buttonDefaultBig buttonPrimary"} onClick={login}/>
             </div>
             <figure>
               <img src={imgIndex} alt="imgIndex" />
