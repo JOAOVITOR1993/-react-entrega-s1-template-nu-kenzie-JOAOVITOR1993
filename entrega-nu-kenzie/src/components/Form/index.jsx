@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./styles.css";
 import { v4 } from "uuid";
-import { Inputs } from "../Inputs";
-import { ButtonForm } from "../Buttons";
-
+import { Input } from "../Inputs";
+import { Buttons} from "../Buttons";
+import { Select } from "../Select";
 
 export const Form = ({
   listTransactions,
@@ -46,17 +46,19 @@ export const Form = ({
     ]);
   };
 
+
   return (
     <form onSubmit={(event) => addTransaction(event.preventDefault())}>
-      <Inputs
-        textInput={textInput}
-        valueInput={valueInput}
-        typeSelect={typeSelect}
-        setTextInput={setTextInput}
-        setValueInput={setValueInput}
-        setTypeSelect={setTypeSelect}
-      />
-      <ButtonForm />
+      <Input label={"Descrição"} type={"text"} placeholder={"Digite aqui sua descrição"} value={textInput} onChange={(event) => setTextInput(event.target.value)}/>
+      <p>Ex: Compra de roupas</p>
+      <div className="divValueType">
+        <div>
+          <Input label={"Valor"} type={"number"} placeholder={"1"} value={valueInput} onChange={(event) => event.target.value >= 0 ? setValueInput(event.target.value) : (event.target.value = 0)}/>
+          <p>R$</p>
+        </div>
+        <Select typeSelect={typeSelect} setTypeSelect={setTypeSelect} />
+      </div>
+      <Buttons name={"Inserir valor"} className={"buttonDefaultBig buttonPrimary"} type="submit"/>
     </form>
   );
 };

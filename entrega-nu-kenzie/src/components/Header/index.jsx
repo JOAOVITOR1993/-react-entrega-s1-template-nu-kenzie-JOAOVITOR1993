@@ -1,4 +1,5 @@
 import logo from "../../../src/assets/icons/Nu Kenzie.svg";
+import { Buttons } from "../Buttons";
 
 export const Header = ({ logout }) => {
   return (
@@ -7,9 +8,7 @@ export const Header = ({ logout }) => {
         <figure>
           <img src={logo} alt="logo" />
         </figure>
-        <button onClick={logout} className="buttonDefault buttonGrey">
-          Início
-        </button>
+        <Buttons name={"Início"} className={"buttonDefault buttonGrey"} onClick={logout}/>
       </div>
     </header>
   );

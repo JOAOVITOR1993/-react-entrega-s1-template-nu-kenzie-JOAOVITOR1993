@@ -1,7 +1,7 @@
 import "./styles.css";
 
 export const TotalMoney = ({ listTransactions }) => {
-  function total() {
+  const total = () => {
     const prices = listTransactions.map((element) => {
       return element.value;
     });

@@ -43,11 +43,14 @@ export const List = ({
 
   return (
     <div>
-      <Buttons
-        listAllTransactions={listAllTransactions}
-        listDeposits={listDeposits}
-        listExpenses={listExpenses}
-      />
+      <div className="divButtons">
+        <h2>Resumo financeiro</h2>
+        <div>
+            <Buttons name={"Todos"} className={"buttonDefault buttonPrimary"} onClick={listAllTransactions}/>
+            <Buttons name={"Entradas"} className={"buttonDefault buttonGrey"} onClick={listDeposits}/>
+            <Buttons name={"Despesas"} className={"buttonDefault buttonGrey"} onClick={listExpenses}/>
+        </div>
+      </div>
 
       <ul className="ulTransactions">
         {listRender.length !== 0 ? (

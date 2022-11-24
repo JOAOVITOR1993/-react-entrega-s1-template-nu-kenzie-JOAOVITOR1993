@@ -1,43 +1,18 @@
-import { Select } from "../Select";
-
-export const Inputs = ({
-  textInput,
-  valueInput,
-  typeSelect,
-  setTextInput,
-  setValueInput,
-  setTypeSelect,
-}) => {
+export const Input = ({ label, type, placeholder, value, onChange }) => {
   return (
     <>
-      <label>Descrição</label>
+      <label>{label}</label>
       <input
-        type="text"
-        placeholder="Digite aqui sua descrição"
-        value={textInput}
-        onChange={(event) => setTextInput(event.target.value)}
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
         required
       />
-      <p>Ex: Compra de roupas</p>
-
-      <div className="divValueType">
-        <div>
-          <label>Valor</label>
-          <input
-            type="number"
-            placeholder="1"
-            value={valueInput}
-            onChange={(event) =>
-              event.target.value >= 0
-                ? setValueInput(event.target.value)
-                : (event.target.value = 0)
-            }
-            required
-          />
-          <p>R$</p>
-        </div>
-          <Select typeSelect={typeSelect} setTypeSelect={setTypeSelect} />
-      </div>
     </>
   );
 };
+
+
+
+
